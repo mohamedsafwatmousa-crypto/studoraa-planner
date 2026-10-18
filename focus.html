@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--fontawesome for icons-->
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="../css/fouus-style.css" />
+    <title>Focus Mode Pro</title>
+  </head>
+
+  <body>
+    <p onclick="back()" class="back"><i class="fa-solid fa-angle-left"></i></p>
+    <div class="container">
+      <h1>Focus Mode</h1>
+      <div class="subtitle">Stay focused and achieve your goals</div>
+      <!-- select subject -->
+      <div class="selection">
+        <select id="subject">
+          <!-- <option value="math">math</option>
+          <option value="html">html</option>
+          <option value="css">css</option> -->
+        </select>
+        <!-- time of pomo -->
+        <!-- <select id="mode">
+          <option value="15">15 min</option>
+          <option value="25" selected>25 min</option>
+          <option value="50">50 min</option>
+        </select> -->
+      </div>
+      <!-- timer -->
+      <div class="circle" id="circle">
+        <div class="time" id="time">25:00</div>
+      </div>
+      <!-- play sound -->
+
+      <div class="controls">
+        <div class="icon" onclick="toggleMusic()">
+          <i class="fa-solid fa-music"></i>
+        </div>
+        <div class="icon" onclick="toggleAmbient()">
+          <i class="fa-solid fa-water"></i>
+        </div>
+      </div>
+      <!-- controls -->
+      <button class="start" onclick="start()">Start</button>
+      <button class="pause" onclick="pause()">Pause / Resume</button>
+      <button class="end" onclick="reset()">End Session</button>
+    </div>
+    <!-- sounds -->
+    <audio id="music" loop>
+      <source />
+    </audio>
+
+    <audio id="ambient" loop>
+      <source />
+    </audio>
+    <audio id="bell" src="../sound/dragon-studio-bell-ring-390294.mp3"></audio>
+    <script src="../js/focus.js"></script>
+  </body>
+</html>

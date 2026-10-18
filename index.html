@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studora – Smart Study Planner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/master.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- ── NAVBAR ── -->
+    <header>
+      <div class="nav">
+        <a class="logo" href="#">Stud<span>ora</span></a>
+        <nav>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li>
+              <a href="dash-board/welcome.html" class="nav-cta"
+                >Start Now &nbsp;<i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- main hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Study Smarter,<br />
+          Achieve <span class="gradient-text">More</span>
+        </h1>
+
+        <p class="hero-desc">
+          Studora helps you organise your subjects, track your focus time,
+          monitor progress, and stay motivated — all in one beautifully designed
+          dashboard.
+        </p>
+
+        <div class="hero-actions">
+          <a href="dash-board/welcome.html" class="btn-primary">
+            Get Started Free &nbsp;<i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#features" class="btn-secondary">
+            <i class="fa-solid fa-circle-play"></i> Explore Features
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Main dashboard card -->
+        <div class="hero-card-main">
+          <div class="card-header-row">
+            <div class="card-avatar">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="card-title-block">
+              <p>Today's Plan</p>
+              <p>Ahmed — 6h goal</p>
+            </div>
+            <div class="card-status">On Track</div>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-label">
+              <span>Mathematics</span>
+              <span>75%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" style="width: 75%"></div>
+            </div>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-label">
+              <span>Physics</span>
+              <span>50%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" style="width: 50%"></div>
+            </div>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-label">
+              <span>Data Structures</span>
+              <span>90%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-mini">
+              <div class="val">4.5h</div>
+              <div class="lbl">Studied today</div>
+            </div>
+            <div class="stat-mini">
+              <div class="val">1240</div>
+              <div class="lbl">XP earned</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badge bottom -->
+        <div class="float-card fc-bottom">
+          <div class="float-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div>
+            <p>Weekly XP</p>
+            <p>+340 pts</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  wave svg -->
+    <div class="wave-divider">
+      <svg
+        viewBox="0 0 1440 60"
+        preserveAspectRatio="none"
+        height="60"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z"
+          fill="#111827"
+        />
+      </svg>
+    </div>
+
+    <!-- features   -->
+    <section class="features" id="features">
+      <p class="section-label">Everything you need</p>
+      <h2 class="section-title">
+        One platform, complete<br /><span
+          style="
+            background: linear-gradient(135deg, #8b5cf6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          >study control</span
+        >
+      </h2>
+      <p class="section-sub">
+        From planning to insights, Studora gives you all the tools to stay
+        consistent and hit your academic goals.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-purple">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3>Subject Manager</h3>
+          <p>
+            Add all your subjects, set target hours, and track how much time
+            you've invested in each one. Never lose track of your priorities.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-blue">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3>Focus Mode</h3>
+          <p>
+            Dive into a distraction-free Pomodoro timer. Stay locked in for deep
+            work sessions and earn XP for every minute you study.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-green">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>Insights & Analytics</h3>
+          <p>
+            Visualise your study patterns, see which subjects need attention,
+            and celebrate your achievements with detailed progress charts.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-yellow">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3>XP & Levels</h3>
+          <p>
+            Gamify your studying. Earn experience points for completing
+            sessions, level up, and stay motivated through every exam season.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-teal">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h3>Daily Planner</h3>
+          <p>
+            Plan what to study today, allocate time to each subject, and monitor
+            your progress against your daily study goal in real time.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon icon-red">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3>Smart Alerts</h3>
+          <p>
+            Get notified when you're falling behind on a subject or when it's
+            time to switch focus — so you're always one step ahead.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- how works-->
+    <section class="how-it-works" id="how">
+      <div class="how-inner">
+        <p class="section-label">Simple by design</p>
+        <h2 class="section-title">Up and running<br />in minutes</h2>
+        <p class="section-sub">
+          No complicated setup. Just start and let Studora do the heavy lifting.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <h4>Create your profile</h4>
+            <p>
+              Enter your name, set your daily study goal, and add your subjects
+              to get personalised to you.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">2</div>
+            <h4>Plan your day</h4>
+            <p>
+              Pick what to study and how long. The dashboard keeps everything
+              visible at a glance.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">3</div>
+            <h4>Enter focus mode</h4>
+            <p>
+              Start a timed session and stay distraction-free. A bell rings when
+              your session ends.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">4</div>
+            <h4>Track your growth</h4>
+            <p>
+              Review your weekly insights, check your XP, and watch your level
+              rise as you study more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--start now section-->
+    <div class="cta-section">
+      <h2>
+        Ready to level up<br /><span
+          style="
+            background: linear-gradient(135deg, #8b5cf6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          "
+          >your studies?</span
+        >
+      </h2>
+      <p>
+        Join students who are already studying smarter with Studora. It's free,
+        it's fast, and it works.
+      </p>
+      <a
+        href="dash-board/welcome.html"
+        class="btn-primary"
+        style="display: inline-flex; font-size: 16px; padding: 16px 36px"
+      >
+        Start for free &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!--footer-->
+    <footer>
+      <div class="footer-logo">Stud<span>ora</span></div>
+      <p>
+        A smart study planner built to help you achieve your goals efficiently.
+      </p>
+      <p class="dev">
+        developed by
+        "M.Mahmoud"<span>,</span>"Y.Hamdy"<span>,</span>"A.Sayed"<span>,</span>"M.Rafat"<span>,</span>"M.Safwat"
+      </p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+:root {
+
+  /*Background Colors */
+  --bg-main: #0B1220;
+  --bg-secondary: #0F172A;
+  --bg-card: #111827;
+
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.05);
+
+  /* Primary Gradient */
+  --gradient-primary: linear-gradient(135deg, #7C3AED, #3B82F6);
+
+  /* Purple */
+  --purple-500: #7C3AED;
+  --purple-400: #8B5CF6;
+  --purple-300: #A78BFA;
+
+  /* Blue */
+  --blue-500: #3B82F6;
+  --blue-400: #60A5FA;
+
+  /* Success */
+  --green-500: #10B981;
+
+  /*Warning */
+  --yellow-500: #F59E0B;
+
+  /* Danger */
+  --red-500: #EF4444;
+
+  /*Text Colors */
+  --text-main: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+
+  /* Glow Effects */
+  --glow-purple: 0 0 20px rgba(124, 58, 237, 0.5);
+  --glow-blue: 0 0 20px rgba(59, 130, 246, 0.5);
+
+  /*Border Radius */
+  --radius-lg: 20px;
+  --radius-md: 12px;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../imgs/bg-moon.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 800px;
+  color: var(--text-main);
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+
+}
+
+.back {
+  background-color: var(--glass-bg);
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 80px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.back i {
+  color: var(--text-muted);
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#subject {
+  width: 200px;
+  height: 40px;
+  padding: 8px;
+}
+
+
+.container {
+  width: 360px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+select {
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: var(--bg-secondary);
+  color: var(--text-main);
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: conic-gradient(var(--purple-500) 360deg, #222 0deg);
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: var(--bg-secondary);
+  border-radius: 50%;
+}
+
+.time {
+  position: relative;
+  font-size: 38px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.start {
+  background: var(--purple-400);
+  color: var(--text-main);
+}
+
+.pause {
+  background: var(--yellow-500);
+  color: var(--text-main);
+}
+
+.end {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-main);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

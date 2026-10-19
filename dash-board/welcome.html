@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Study Hub</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/welcome.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <!-- Header -->
+        <div class="header">
+          <div class="logo-wrap"><i class="fa-solid fa-user-graduate"></i></div>
+          <h1>Smart Study Hub</h1>
+          <p>Let's build your study plan</p>
+        </div>
+
+        <!-- Stepper -->
+        <div class="stepper">
+          <div class="step-dot active" id="s1"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="s2"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="s3"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="s4"></div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="s5"></div>
+        </div>
+
+        <!-- Setup Form -->
+        <div id="setupView">
+          <div class="card">
+            <div class="card-greet">Hi there! <i style="color: var(--purple); font-size: 25px;" v class="fa-solid fa-hands-clapping"></i></div>
+            <div class="card-sub">Let's get to know you</div>
+
+            <div class="fields">
+              <div class="field">
+                <label>Your Name</label>
+                <input
+                  type="text"
+                  id="nameInput"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="field">
+                <label>Daily Study Hours</label>
+                <div class="hours-row">
+                  <input
+                    type="number"
+                    id="hoursInput"
+                    placeholder="4"
+                    min="1"
+                    max="24"
+                  />
+                  <span class="hours-unit">hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-label">Add Your Subjects</div>
+            <div class="tags-wrap" id="tagsWrap"></div>
+
+            <div class="add-row">
+              <input
+                class="add-input"
+                type="text"
+                id="subjectInput"
+                placeholder="+ Add another subject..."
+              />
+              <button class="add-subject-btn" id="addBtn" title="Add subject">
+                +
+              </button>
+            </div>
+
+            <button class="go-btn" id="goBtn">Get Started  </button>
+          </div>
+
+          
+        </div>
+
+        <!-- Dashboard (after submit) -->
+        <div id="dashView" class="dashboard">
+          <div class="card">
+            <div class="dash-header">
+              <div>
+                <div
+                  style="
+                    font-size: 12px;
+                    color: var(--muted);
+                    margin-bottom: 4px;
+                  "
+                >
+                  Welcome back <i style="color: var(--purple);" class="fa-solid fa-hands-clapping"></i>
+                </div>
+                <div class="dash-name">Hello, <span id="dashName"></span></div>
+              </div>
+              <button class="edit-btn" id="editBtn"><i style="margin-right: 5px;" class="fa-regular fa-pen-to-square"></i>Edit</button>
+            </div>
+
+            <div class="stat-row">
+              <div class="stat-card">
+                <div class="s-label">Daily Goal</div>
+                <div class="s-value" id="dashHours"></div>
+                <div class="s-unit">hours / day</div>
+              </div>
+              <div class="stat-card">
+                <div class="s-label">Subjects</div>
+                <div class="s-value" id="dashCount"></div>
+                <div class="s-unit">active subjects</div>
+              </div>
+            </div>
+
+            <div class="dash-subjects-label">Your Subjects</div>
+            <div class="tags-wrap" id="dashTags"></div>
+          </div>
+
+          <div class="save" style="margin-top: 25px">
+            <button onclick="sart()" type="button">Start</button>
+        </div>
+      </div>
+    </div>
+
+<script src="../js/welcome.js"></script>
+  </body>
+</html>

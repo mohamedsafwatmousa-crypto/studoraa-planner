@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/model.css" />
+    <!--fontawesome for icons-->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <title>My Subjects</title>
+    <link rel="stylesheet" href="../css/subjects.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- ── Sidebar ── -->
+
+      <nav>
+        <div class="logo-wrap"><i class="fa-solid fa-user-graduate"></i></div>
+        <div class="welcome">
+          <p>hello : <span id="user"></span></p>
+        </div>
+
+        <ul>
+          <li>
+            <a href="../dash-board/add_task_pro.html"
+              ><i class="fa-solid fa-house"></i>Home</a
+            >
+            <span></span>
+          </li>
+          <li>
+            <a href="../dash-board/focus.html"
+              ><i class="fa-solid fa-calendar-days"></i>Focus</a
+            >
+          </li>
+          <li>
+            <a href="../dash-board/insights.html"
+              ><i class="fa-solid fa-chart-column"></i>Insights</a
+            >
+          </li>
+          <li>
+            <a style="color: #7c3aed" href="../dash-board/subjects.html"
+              ><i style="color: #7c3aed" class="fa-solid fa-book"></i
+              >Subjects</a
+            >
+          </li>
+          <li>
+            <a href="../dash-board/welcome.html"
+              ><i class="fa-solid fa-trophy"></i>Profile</a
+            >
+          </li>
+        </ul>
+        <div id="logout" class="logout"><p>log out</p></div>
+      </nav>
+      <!-- ── Main Content ── -->
+      <div class="main">
+        <div class="page">
+          <!-- ── Topbar ── -->
+          <div class="topbar">
+            <div class="topbar-left">
+              <div class="topbar-title">My Subjects</div>
+              <div class="topbar-sub">Manage your subjects and goals</div>
+            </div>
+            <div class="topbar-right">
+              <button class="btn-sm import" id="toggleAddBtn">
+                ＋ Add Subject
+              </button>
+            </div>
+          </div>
+
+          <!-- ── Add Subject Form ── -->
+          <div class="add-form card" id="addForm">
+            <div class="form-grid">
+              <div>
+                <div class="input-label">Subject Name</div>
+                <input
+                  class="input-field"
+                  id="newName"
+                  placeholder="e.g. Data Science"
+                />
+              </div>
+              <div>
+                <div class="input-label">Target (hours)</div>
+                <input
+                  class="input-field"
+                  id="newTarget"
+                  type="number"
+                  placeholder="e.g. 8"
+                  min="1"
+                />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn-sm" id="addSubjectBtn">Add Subject</button>
+              <button class="btn-outline-sm" id="cancelBtn">Cancel</button>
+            </div>
+          </div>
+
+          <!-- ── Empty State ── -->
+          <div class="empty-state card" id="emptyState">
+            No subjects yet. Click "＋ Add Subject" to get started!
+          </div>
+
+          <!-- ── Subjects List ── -->
+          <div class="subjects-list" id="subjectsList"></div>
+        </div>
+        <!-- end .page -->
+      </div>
+      <!-- end .main -->
+    </div>
+    <!-- end .app -->
+    <div class="chatbot" id="fab" onclick="togglePopup()">
+      <i class="fa-solid fa-robot"></i>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup-wrap" id="popup">
+      <div class="popup">
+        <div class="p-header">
+          <div>
+            <div class="p-title" id="popTitle">👋 Hey! What's your name?</div>
+            <div class="p-sub" id="popSub">Step 1 of 4</div>
+          </div>
+          <button class="close-btn" onclick="togglePopup()">×</button>
+        </div>
+        <div class="steps-bar">
+          <div class="s-dot active" id="sd0"></div>
+          <div class="s-dot" id="sd1"></div>
+          <div class="s-dot" id="sd2"></div>
+          <div class="s-dot" id="sd3"></div>
+        </div>
+        <div class="p-body">
+          <!-- pane 0: name -->
+          <div class="step-pane active" id="pane0">
+            <span class="q-label">Enter your first name</span>
+
+            <input type="text" id="iName" placeholder="e.g. Alex" />
+            <div id="e0" class="err" style="display: none">
+              Please enter your name
+            </div>
+            <div class="act-row">
+              <span></span>
+              <button class="btn-next" onclick="s1()">Next →</button>
+            </div>
+          </div>
+
+          <!-- pane 1: hours -->
+          <div class="step-pane" id="pane1">
+            <span class="q-label"
+              ><span id="nameDisp"></span>, how many hours do you have to
+              study?</span
+            >
+            <input
+              type="number"
+              id="iHours"
+              placeholder="e.g. 20"
+              min="1"
+              max="500"
+            />
+            <div id="e1" class="err" style="display: none">
+              Please enter a valid number of hours
+            </div>
+            <div class="act-row">
+              <button class="btn-back" onclick="goPane(0)">← Back</button>
+              <button class="btn-next" onclick="s2()">Next →</button>
+            </div>
+          </div>
+
+          <!-- pane 2: subjects -->
+          <div class="step-pane" id="pane2">
+            <span class="q-label">What subjects will you study?</span>
+
+            <div id="subjList">
+              <div class="subj-row">
+                <input type="text" class="si" placeholder="Subject name" />
+                <button class="rm-btn" onclick="rmSubj(this)">×</button>
+              </div>
+            </div>
+            <button class="add-subj" onclick="addSubj()">+ Add Subject</button>
+            <div id="e2" class="err" style="display: none">
+              Please add at least one subject
+            </div>
+            <div class="act-row">
+              <button class="btn-back" onclick="goPane(1)">← Back</button>
+              <button class="btn-next" onclick="s3()">Next →</button>
+            </div>
+          </div>
+
+          <!-- pane 3: hours per subject -->
+          <div class="step-pane" id="pane3">
+            <span class="q-label">Distribute hours across subjects</span>
+            <div class="total-bar">
+              <span>Total: <strong id="tDisp">0</strong> hrs</span>
+              <div>
+                Assigned: <span class="t-num" id="tAssigned">0</span> hrs
+              </div>
+            </div>
+            <div id="hrsCards"></div>
+            <div id="e3" class="err" style="display: none">
+              Assigned hours must match the total exactly
+            </div>
+            <div class="act-row">
+              <button class="btn-back" onclick="goPane(2)">← Back</button>
+              <button class="btn-next" onclick="generate()">
+                Generate My Plan
+              </button>
+            </div>
+          </div>
+
+          <!-- pane 4: result -->
+          <div class="step-pane" id="pane4">
+            <div
+              class="result-actions"
+              id="resultActions"
+              style="display: none"
+            >
+              <button class="copy-btn" id="copyBtn" onclick="copyPlan()">
+                Copy Plan
+              </button>
+            </div>
+            <div class="result-wrap" id="resultBox">
+              <div class="loading">
+                <div class="loading-dots">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="loading-text">Generating your plan ✨</div>
+              </div>
+            </div>
+            <button class="restart" onclick="reset()">← Start Over</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/moudel.js"></script>
+    <script src="../js/subjects.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+  </body>
+</html>

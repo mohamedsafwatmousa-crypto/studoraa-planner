@@ -1,0 +1,511 @@
+:root {
+
+    /*Background Colors */
+    --bg-main: #0B1220;
+    --bg-secondary: #0F172A;
+    --bg-card: #111827;
+
+    /* Glass Effect */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.05);
+
+    /* Primary Gradient */
+    --gradient-primary: linear-gradient(135deg, #7C3AED, #3B82F6);
+
+    /* Purple */
+    --purple-500: #7C3AED;
+    --purple-400: #8B5CF6;
+    --purple-300: #A78BFA;
+
+    /* Blue */
+    --blue-500: #3B82F6;
+    --blue-400: #60A5FA;
+    --purple: #7c3aed;
+    --purple2: #4f46e5;
+    /* Success */
+    --green-500: #10B981;
+
+    /*Warning */
+    --yellow-500: #F59E0B;
+
+    /* Danger */
+    --red-500: #EF4444;
+
+    /*Text Colors */
+    --text-main: #FFFFFF;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+
+    /* Glow Effects */
+    --glow-purple: 0 0 20px rgba(124, 58, 237, 0.5);
+    --glow-blue: 0 0 20px rgba(59, 130, 246, 0.5);
+
+    /*Border Radius */
+    --radius-lg: 20px;
+    --radius-md: 12px;
+
+    --main-bg: #080a12;
+    --card-bg: #121620;
+    --primary-purple: #6c5ce7;
+    --text-main: #ffffff;
+    --text-secondary: #b2bec3;
+    --accent-green: #00b894;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    background-color: var(--bg-main);
+    height: 100%;
+    color: var(--text-main);
+
+
+}
+
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+nav {
+
+    width: 150px;
+    height: 695px;
+    background-color: var(--bg-card);
+    border-right: solid var(--glass-border) 2px;
+}
+
+nav ul {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 50px;
+    list-style: none;
+    padding-left: 10px;
+
+
+
+
+}
+
+nav ul li {
+    font-weight: 800;
+}
+
+nav .logo-wrap {
+    margin: 30px auto 15px auto;
+    font-size: 40px;
+    color: var(--text-main);
+    background: linear-gradient(135deg, var(--purple), var(--purple2));
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .welcome {
+    width: 90%;
+    height: 35px;
+    margin: 15px auto 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+    background: linear-gradient(to right, var(--purple), var(--purple2));
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user {
+    font-size: 14px;
+}
+
+nav .logout {
+    width: 90%;
+    height: 35px;
+    margin: 40px auto 0px auto;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: capitalize;
+    background: linear-gradient(to right, rgb(123, 28, 28), rgb(187, 49, 49));
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+ul a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+nav ul li a i {
+    color: var(--text-secondary);
+    font-size: 20px;
+    transition: 0.3s;
+    margin: 5px;
+    width: 30px;
+    height: 29px;
+    padding-top: 3px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover i {
+    color: var(--text-main) !important;
+    background-color: var(--purple-500);
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90%;
+    margin: 20px;
+
+}
+
+
+
+
+header {
+    width: 100%;
+    height: 12vh;
+    padding-left: 20px;
+    padding-top: 10px;
+    line-height: 25px;
+
+
+}
+
+.logo1 {
+
+
+
+    font-size: 26px;
+    color: red;
+
+
+
+
+}
+
+.logo2 {
+
+
+
+    font-size: 26px;
+    color: var(--green-500);
+
+}
+
+
+.logo3 {
+
+
+
+    font-size: 26px;
+    color: var(--yellow-500);
+
+
+}
+
+
+
+
+section.cards {
+    width: 100%;
+
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    /* gap: %; */
+    padding: 5px;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+section.cards div {
+    width: 30%;
+    height: 90%;
+    border-radius: 15px;
+    background-color: var(--bg-card);
+    /* border: solid var(--glass-border) 2px; */
+}
+
+.warning>.chelid {
+    width: 90%;
+    height: 77%;
+    /* border-radius: 15px; */
+    /* background-color: var(--bg-card); */
+    /* border: solid var(--glass-border) 2px; */
+    padding-left: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+p[class="subject"] {
+    position: relative;
+    /* background-color: #00b894; */
+    width: 100%;
+    height: 30%;
+
+}
+
+p[class="subject"]>span {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
+
+}
+
+p[class="time"] {
+
+
+    position: relative;
+    width: 100%;
+    height: 30%;
+
+}
+
+p[class="time"]+span {
+
+
+    position: absolute;
+    font-size: 20px;
+
+
+
+}
+
+.corect>.chelid {
+    width: 95%;
+    height: 77%;
+    padding-left: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+
+p[class="job"] {
+    position: relative;
+    width: 100%;
+    height: 30%;
+
+}
+
+p[class="job"]>span {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
+
+
+}
+
+
+
+p[class="good"] {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    margin-top: 20px;
+
+}
+
+.object>.chelid {
+    width: 95%;
+    height: 77%;
+    padding-left: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+object>.chelid p {
+
+
+    width: 100%;
+    height: 20%;
+    background-color: #00b894;
+}
+
+
+.object_dis .sup {
+
+
+    font-size: 25px;
+    color: #00b894;
+
+
+
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding-left: 20px;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.summary p span {
+    padding-left: 50px;
+    font-size: 20px;
+
+
+
+
+
+}
+
+.summary p .summ {
+    padding-left: 80px;
+
+
+
+
+
+
+
+}
+
+
+
+
+.chart {
+    width: 100%;
+
+    height: 45vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 8%;
+    padding-left: 20px;
+
+
+}
+
+.chart_card {
+
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: var(--bg-card);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--glass-border) 2px;
+
+
+}
+
+#bar_chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.summary {
+
+    width: 30%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: var(--bg-card);
+    border: solid var(--glass-border) 2px;
+
+
+}
+
+/* add chat bot */
+.chatbot {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--purple-400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 23px;
+    bottom: 15px;
+    cursor: pointer;
+    animation-name: an;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+.chatbot i {
+    font-size: 22px;
+}
+
+.chatbot::before {
+    content: "AI Assistant";
+    position: absolute;
+    right: 85px;
+    bottom: 30px;
+    background-color: var(--purple-400);
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+.chatbot::after {
+    content: "";
+    position: absolute;
+    right: 68px;
+    bottom: 33px;
+    border: 18px solid;
+    border-color: transparent transparent var(--purple-400) transparent;
+
+}
+
+@keyframes an {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
